@@ -1,0 +1,17 @@
+<div fxLayout="column" fxLayoutGap="20px" fxLayoutAlign="center center" fxFlexFill>
+    <div fxLayout="row" fxLayoutAlign="center center">
+        <img src="../../../assets/images/logo.png" alt="" width="64px">
+    </div>
+    <div fxLayout="row" fxLayoutAlign="center center">
+        <form fxFlex="300px" fxLayout="column" fxLayoutGap="5px" [formGroup]="verifyForm" (submit)="submit()">
+            <mat-form-field appearance="outline">
+                <mat-label>کدتایید</mat-label>
+                <input matInput  autocomplete="off" name="username" [formControl]="code">
+                <mat-error *ngIf="code.hasError('required')">
+                    کدتایید الزامی می باشد.
+                </mat-error>
+            </mat-form-field>
+            <button mat-raised-button color="primary">ورود</button>
+        </form>
+    </div>
+</div>

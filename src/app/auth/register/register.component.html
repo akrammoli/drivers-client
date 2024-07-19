@@ -1,0 +1,41 @@
+<div fxLayout="row" fxLayoutAlign="center center" class="container">
+    <mat-card fxFlex.gt-xs="500px" fxFlex.lt-sm="100%" class="custom-card">
+        <mat-card-header>
+            <mat-card-title>
+                سامانه مدیریت رانندگان - ثبت نام
+            </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <form>
+                <div fxLayout="column">
+                    <div fxLayoutAlign="center center">
+                        <h2>ثبت نام افراد حقیقی</h2>
+                    </div>
+                    <mat-form-field appearance="outline">
+                        <mat-label>کد ملی</mat-label>
+                        <input type="tel" matInput autocomplete="off">
+                    </mat-form-field>
+                    <mat-form-field appearance="outline">
+                        <mat-label>تاریخ تولد</mat-label>
+                        <input matInput autocomplete="off">
+                    </mat-form-field>
+                    <mat-form-field appearance="outline">
+                        <mat-label>نام کاربری</mat-label>
+                        <input matInput autocomplete="off">
+                    </mat-form-field>
+                    <mat-form-field appearance="outline">
+                        <mat-label>رمز عبور</mat-label>
+                        <input type="password" matInput autocomplete="off">
+                    </mat-form-field>
+                    <mat-form-field appearance="outline">
+                        <mat-label>شماره تلفن همراه</mat-label>
+                        <input type="tel" matInput autocomplete="off">
+                    </mat-form-field>
+                    <button type="submit" mat-raised-button color="primary">
+                        دریافت کد تایید
+                    </button>
+                </div>
+            </form>
+        </mat-card-content>
+    </mat-card>
+</div>

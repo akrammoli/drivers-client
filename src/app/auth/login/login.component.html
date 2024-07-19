@@ -1,0 +1,24 @@
+<div fxLayout="column" fxLayoutGap="20px" fxLayoutAlign="center center" fxFlexFill>
+    <div fxLayout="row" fxLayoutAlign="center center">
+        <img src="../../../assets/images/logo.png" alt="" width="64px">
+    </div>
+    <div fxLayout="row" fxLayoutAlign="center center">
+        <form fxFlex="300px" fxLayout="column" fxLayoutGap="5px" [formGroup]="loginForm" (submit)="submit()">
+            <mat-form-field appearance="outline">
+                <mat-label>کدملی</mat-label>
+                <input matInput  autocomplete="off" name="username" [formControl]="nationalCode">
+                <mat-error *ngIf="nationalCode.hasError('required')">
+                    کدملی الزامی می باشد.
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>موبایل</mat-label>
+                <input  matInput  autocomplete="off" formControlName="phone">
+                <mat-error *ngIf="phone.hasError('required')">
+                    موبایل الزامی می باشد.
+                </mat-error>
+            </mat-form-field>
+            <button mat-raised-button color="primary">ادامه</button>
+        </form>
+    </div>
+</div>
